@@ -1,27 +1,33 @@
 {
-  "name": "Syndication Verification",
-  "version": "1.0",
-  "description": "Checks for content on NICE pages",
-  "background": { "scripts": ["background.js"] },
-  "page_action" :
-  {
-    "default_icon" : "icon-19.png",
-    "default_title" : "There's a 'G' in this URL!"
+    "name": "Syndication Verification",
+    "version": "1.0",
+    "description": "Checks for content on NICE pages",
+    "background": {
+        "scripts": ["background.js"]
     },
-    "permissions" : [
-    "http://guidance.nice.org.uk/**",
-    "tabs"
+    "page_action": {
+        "default_icon": "icon-19.png",
+        "default_title": "Syndication Verification",
+        "default_popup" : "popup.html"
+    },
+    "permissions": [
+        "http://guidance.nice.org.uk/**",
+        "tabs",
+        "clipboardWrite",
+        "clipboardRead"
     ],
-    "icons" : {
-      "48" : "icon-48.png",
-      "128" : "icon-128.png"
-      },
-      "manifest_version": 2,
-      "content_scripts" : [{
-        "matches" : ["http://guidance.nice.org.uk/*"],
-        "js": ["lib/sizzle.min.js", "contentscript.js"]
-      }
+    "icons": {
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["http://guidance.nice.org.uk/*"],
+            "css": ["css/checksyndication.css"],
+            "js": ["lib/jquery-1.10.1.min.js", "contentscript.js"]
+        }
 
-      ]
+    ]
 
-    }
+}

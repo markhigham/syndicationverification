@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Syndication Checker</title>
+
+    <link rel="stylesheet" type="text/css" href="css/checksyndication.css"/>
+
+    <script id="syndicationRow" type="text/html">
+
+        <div class='output'>
+            {{#data.elements}}
+            <div class='cell'>
+                <span class='count'>{{count}}</span>
+                <span class='title'>{{name}}</span>
+            </div>
+            {{/data.elements}}
+
+        </div>
+
+        <textarea id='copySource'>
+            {{data.code}}&#09;{{#data.elements}}{{count}}&#09;{{/data.elements}}
+        </textarea>
+
+    </script>
+
+    <script src="lib/jquery-1.10.1.min.js"></script>
+    <script src="lib/ICanHaz.min.js"></script>
+    <script src="checksyndication.js"></script>
+</head>
+<body class='popup'>
+<h1 id='itemTitle'>Check Syndication</h1>
+
+<div id="results">
+</div>
+<div class='button-container'>
+    This has been copied to the clipboard!
+</div>
+
+</body>
+</html>
