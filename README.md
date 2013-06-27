@@ -2,7 +2,7 @@
 
 Clone the repository 
 
-  git clone https://github.com/markhigham/syndicationverification
+	git clone https://github.com/markhigham/syndicationverification
 	
 Install the chome extension
 
