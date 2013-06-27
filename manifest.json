@@ -14,7 +14,8 @@
         "http://guidance.nice.org.uk/**",
         "tabs",
         "clipboardWrite",
-        "clipboardRead"
+        "clipboardRead",
+        "storage"
     ],
     "icons": {
         "48": "icon-48.png",

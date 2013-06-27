@@ -67,10 +67,15 @@ function applyStyleTo(foundElements, className){
 
 }
 
+
+
 chrome.extension.onRequest.addListener(
 	function(request, sender, sendResponse){
 		if(request.method == "checkSyndicationElements"){
 			sendResponse({ data: checkSyndicationElements()});
-		}
+		} else if (request.method == "storeSyndicationElements"){
+            sendResponse({ data: true});
+
+        }
 	}
 );
